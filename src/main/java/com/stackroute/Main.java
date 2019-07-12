@@ -1,6 +1,7 @@
 package com.stackroute;
 
 import com.stackroute.demo.BeanLifeCycleDemoBean;
+import com.stackroute.demo.BeanPostProcessorDemoBean;
 import com.stackroute.domain.Movie;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactory;
@@ -16,5 +17,6 @@ public class Main {
         AbstractApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
         BeanLifeCycleDemoBean beanLifecycleDemoBean = context.getBean("beanlifecycle", BeanLifeCycleDemoBean.class);
         context.registerShutdownHook();
+        BeanPostProcessorDemoBean beanPostProcessorDemoBean = context.getBean("beanpost", BeanPostProcessorDemoBean.class);
     }
 }
