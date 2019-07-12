@@ -7,9 +7,14 @@ public class Movie {
         this.actor = actor;
     }
 
+/*  public Movie(Actor actor1, Actor actor2) {
+        this.actor1 = actor1;
+        this.actor2 = actor2;
+    }*/
 
     public void printAboutMovieActor()
     {
         actor.printActor();
+
     }
 }
