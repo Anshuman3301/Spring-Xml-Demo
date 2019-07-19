@@ -10,10 +10,13 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) 
+    {
+        //bean cntainser using aplication conetext.
         ApplicationContext context= new ClassPathXmlApplicationContext("beans.xml");
         Movie movie1=context.getBean("movie1",Movie.class);
 
+        //bean container using bean factory.
         BeanFactory beanFactory=new  XmlBeanFactory(new ClassPathResource("beans.xml"));
         Movie movie2=context.getBean("movie2",Movie.class);
         // movie1.printAboutMovieActor();
