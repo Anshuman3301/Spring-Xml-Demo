@@ -8,6 +8,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Main {
     public static void main(String[] args) {
+        
+        //movie bean creation using beans.xml file.
         ApplicationContext context= new ClassPathXmlApplicationContext("beans.xml");
         Movie movie1=context.getBean("movie1",Movie.class);
         movie1.printAboutMovieActor();
